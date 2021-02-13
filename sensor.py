@@ -1,15 +1,13 @@
-from ADS1x15 import ADS1115
-from py7seg import Py7Seg # xxx
 import time
+from calibration.gas_detection import GasDetection
 
-adc = ADS1115()
-channel = 0
-gain = 1
-ps = Py7Seg() # xxx
-t = 0
-while True:
-    data = adc.read_adc(channel, gain)
-    print(t, "s:", data)
-    ps.showText("%4d" %data) # xxx
-    t += 0.1
-    time.sleep(0.1)
+detection = GasDetection()
+ppm = detection.percentage()
+
+print('CO: {} ppm'.format(ppm[detection.CO_GAS]))
+print('H2: {} ppm'.format(ppm[detection.H2_GAS]))
+print('CH4: {} ppm'.format(ppm[detection.CH4_GAS]))
+print('LPG: {} ppm'.format(ppm[detection.LPG_GAS]))
+print('PROPANE: {} ppm'.format(ppm[detection.PROPANE_GAS]))
+print('ALCOHOL: {} ppm'.format(ppm[detection.ALCOHOL_GAS]))
+print('SMOKE: {} ppm\n'.format(ppm[detection.SMOKE_GAS]))

@@ -69,7 +69,7 @@ class methods():
     # Drowsiness yawn gaze and headpose Detection
     def drowsiness(self, img, rect, dtype="int"):
         self.frame = img
-        img = img[:, :, [2, 1, 0]]  # BGR => RGB
+        #img = img[:, :, [2, 1, 0]]  # BGR => RGB
         yawn = False
         drowsiness = False
         landmarks = self.predictor(img, rect)

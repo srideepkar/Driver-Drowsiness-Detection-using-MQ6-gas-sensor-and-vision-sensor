@@ -6,7 +6,7 @@ from method import methods
 
 
 class process1():
-    def __init__(self, img):
+    def __init__(self):
         self.detector = dlib.get_frontal_face_detector()
         self.face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         self.max_frame_count = int(os.getenv('MAX_FRAME_COUNT', 0))
@@ -16,7 +16,7 @@ class process1():
         for i in range(5):
             for _ in range(15):
                 self.head_vote[i].put(False)
-
+    def process1(self,img):
         # Process
         faces = self.detector(img)
         face = None
@@ -71,5 +71,12 @@ class process1():
                     break
 
             print("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
+                gaze) + " |" + "safety_status: " + str(safety_status) + " |" + "headpose_status: " + str(
+                self.headpose_status))
+            
+            #returning status of the person
+            return(safety_status)
+                
+            return("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
                 gaze) + " |" + "safety_status: " + str(safety_status) + " |" + "headpose_status: " + str(
                 self.headpose_status))
