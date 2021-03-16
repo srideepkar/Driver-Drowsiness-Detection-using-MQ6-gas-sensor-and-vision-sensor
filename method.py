@@ -119,7 +119,7 @@ class methods():
 
         # gaze detection
         left_gaze_ratio = self.get_gaze_ratio([landmarks.part(i) for i in range(36, 42)])
-        right_gaze_ratio = self.get_gaze_ratio([landmarks.part(i) for i in range(42, 48)])
+        right_gaze_ratio = self.get_gaze_ratio([landmarks.part(i) for i in range(42, 49)])
         gaze_ratio = (right_gaze_ratio + left_gaze_ratio) / 2
         if gaze_ratio <= 0.75:
             gaze = 'RIGHT'

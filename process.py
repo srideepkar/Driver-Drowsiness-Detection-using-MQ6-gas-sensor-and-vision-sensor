@@ -70,13 +70,13 @@ class process1():
                     self.headpose_status = i
                     break
 
-            print("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
-                gaze) + " |" + "safety_status: " + str(safety_status) + " |" + "headpose_status: " + str(
-                self.headpose_status))
+            #print("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
+                #gaze) + " |" + "safety_status: " + str(safety_status) + " |" + "headpose_status: " + str(
+                #self.headpose_status))
             
             #returning status of the person
-            return(safety_status)
+            #return()
                 
-            return("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
+            return(safety_status,("|" + "drowsiness: " + str(drowsiness) + " |" + "yawn: " + str(yawn) + " |" + "gaze: " + str(
                 gaze) + " |" + "safety_status: " + str(safety_status) + " |" + "headpose_status: " + str(
-                self.headpose_status))
+                self.headpose_status)))

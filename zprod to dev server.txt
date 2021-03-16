@@ -1,0 +1,7 @@
+$ export FLASK_APP=example
+$ export FLASK_ENV=development
+$ flask run
+
+
+sudo nano webserver.py
+pythpn3.7 webserver.py

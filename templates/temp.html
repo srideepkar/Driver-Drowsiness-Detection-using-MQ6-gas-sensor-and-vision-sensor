@@ -1,0 +1,73 @@
+<html>
+	<style>
+		p {
+			font-size: 50px;
+			text-align: center;
+			color: yellow;
+			text-shadow: 2px 2px black;
+			font-weight: bold;
+		}
+		.p1 {
+			font-size: 25px;
+			text-align: center;
+			color: white;
+			font-family: Arial;
+		}
+		.wrap{
+			text-align: center;
+		}
+		.but{
+			background-color: black;
+			border: 2px solid white;
+			color: white;
+			padding: 15px 40px;
+			text-align: center;
+			font-size: 20px;
+			margin: 4px 2px;
+			opacity: 0.6;
+			transition: 0.3s;
+			display: inline-block;
+			text-decoration: none;
+			cursor: pointer;
+			justify-content: center
+			position: absolute;
+			font-weight: bold;
+		}
+		.but:hover{
+			background-color: white;
+			border-radius: 10px;
+			color: black;
+			opacity:1;
+		}
+		.result1{
+			font-weight: bold;
+			color: white;
+			font-size: 40px;
+			font-family: Arial;	
+		}
+		.alert{
+			background-color: white;
+			text-align: center;
+			font-size: 100;
+			padding: 50px;
+			border: 5px solid black;
+		}
+	</style>
+	<body bgcolor="black">
+		<div class="p1">Welcome to the frontend UI of</div>
+		<p>Driver Drowsiness Detection</p>
+		<form action="/send" method="POST">
+			<div class="wrap">
+				<input type="submit" class="but" value="START" id="start">START</input>
+			</div>
+			<br>
+			<br>
+			<marquee height="50" width="100%"><div class="result1">Result</div></marquee>
+			<div class="alert">
+				{{result}}
+				<br>
+				<center><img src="{{img_src}}"/></center>		
+			</div>
+		</form>
+	</body>
+</html>
